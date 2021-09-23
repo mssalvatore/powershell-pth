@@ -2,7 +2,6 @@ import click
 from pypsrp.client import Client
 from pypsrp.powershell import PowerShell, RunspacePool
 
-
 DUMMY_HASH = "00000000000000000000000000000000"
 
 
@@ -48,7 +47,7 @@ def connect(host, username, lm_hash, nt_hash, use_ssl=True, timeout=3):
     #
     # pypsrp will parse this string and automatically use the appropriate hash
     # for NTLM authentication.
-    # 
+    #
     # If you only have one of the two hashes, this script will automatically
     # populate the other hash with zeros.
     formatted_ntlm_hashes = f"{lm_hash}:{nt_hash}"
